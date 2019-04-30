@@ -17,18 +17,25 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-//   // cms route loads cms.html
-//   app.get("/cms", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/cms.html"));
-//   });
+  app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/contact.html"));
+  });
 
-//   // blog route loads blog.html
-//   app.get("/blog", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/blog.html"));
-//   });
+  app.get("/educator", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/educator.html"));
+  });
 
-//   app.get("/authors", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/author-manager.html"));
-//   });
+  app.get("/students", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/students.html"));
+  });
+
+  app.get("/aboutus", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/aboutus.html"));
+  });
+
+  //Dept Ed API Test
+  app.get("/survey-test", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/survey-test.html"));
+  });
 
 };
