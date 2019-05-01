@@ -6,6 +6,8 @@
 // =============================================================
 var path = require("path");
 
+var sessionChecker = require('./middleware');
+
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -13,8 +15,27 @@ module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
   // index route loads view.html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+  // app.get("/",function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/index.html"));
+  // });
+
+  // my changes: adding a second path:
+ 
+  app.get("/login", sessionChecker, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.render('login')
+  });
+   // added the path below
+  
+
+  app.get('/dashboard', sessionChecker, (req, res) => {
+    console.log('here in dashboard')
+    res.render('login');
+  });
+
+  // route for Home-Page
+  app.get('/', (req, res) => {
+    res.redirect('/login');
   });
 
 //   // cms route loads cms.html

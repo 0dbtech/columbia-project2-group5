@@ -18,9 +18,15 @@
   },
   "homepage": "https://github.com/0dbtech/columbia-project2-group5#readme",
   "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
+    "morgan": "^1.9.1",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.7.5"
+    "path": "^0.12.7",
+    "sequelize": "^5.8.2"
   }
 }
