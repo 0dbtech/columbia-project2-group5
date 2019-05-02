@@ -6,7 +6,7 @@
 // // =============================================================
 var path = require("path");
 
-var sessionChecker = require('./middleware');
+// var sessionChecker = require('./middleware');
 
 // Routes
 // =============================================================

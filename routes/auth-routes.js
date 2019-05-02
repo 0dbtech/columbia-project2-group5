@@ -1,4 +1,4 @@
-var path = require("path");
+// var path = require("path");
 var sessionChecker = require('./middleware');
 var hbsContent = {userName: '', loggedin: false}; 
 var User = require('../models');
