@@ -77,7 +77,7 @@ var hbsContent = {userName: '', loggedin: false, title: "You are not logged in t
 
 // Routes
 // =============================================================
-// require("./routes/post-api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 // require("./routes/author-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 require("./routes/auth-routes.js")(app);
