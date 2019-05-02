@@ -1,26 +1,23 @@
 var path = require("path");
 var sessionChecker = require('./middleware');
-var hbsContent = {userName: '', loggedin: false, title: "You are not logged in today", body: "Hello World"}; 
+var hbsContent = {userName: '', loggedin: false}; 
 var User = require('../models');
 // Routes
 // =============================================================
 module.exports = function(app) {
 
-  // route for Home-Page
-    // app.get('/', sessionChecker, (req, res) => {
-    //     console.log('here')
-    //     res.redirect('/login');
-    // });
+//   route for Home-Page
+    app.get('/', sessionChecker, (req, res) => {
+        res.redirect('/login');
+    });
 
     // route for user signup
     app.route('/signup')
         //.get(sessionChecker, (req, res) => {
         .get((req, res) => {
-            //res.sendFile(__dirname + '/public/signup.html');
             res.render('signup', hbsContent);
         })
         .post((req, res) => {
-            console.log('creatigg user')
             User.create({
                 username: req.body.username,
                 //email: req.body.email,
@@ -36,10 +33,11 @@ module.exports = function(app) {
         });
 
 
+
+
     // route for user Login
     app.route('/login')
         .get((req, res) => {
-            //res.sendFile(__dirname + '/public/login.html');
             res.render('login', hbsContent);
         })
         .post((req, res) => {
@@ -64,10 +62,7 @@ module.exports = function(app) {
         if (req.session.user && req.cookies.user_sid) {
             hbsContent.loggedin = true; 
             hbsContent.userName = req.session.user.username; 
-            //console.log(JSON.stringify(req.session.user)); 
-            console.log(req.session.user.username); 
-            hbsContent.title = "You are logged in"; 
-            //res.sendFile(__dirname + '/public/dashboard.html');
+            hbsContent.title = "You are successfully loged in"; 
             res.render('index', hbsContent);
         } else {
             res.redirect('/login');
@@ -81,7 +76,6 @@ module.exports = function(app) {
             hbsContent.loggedin = false; 
             hbsContent.title = "You are logged out!"; 
             res.clearCookie('user_sid');
-            console.log(JSON.stringify(hbsContent)); 
             res.redirect('/');
         } else {
             res.redirect('/login');
