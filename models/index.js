@@ -7,9 +7,11 @@ var bcrypt = require('bcrypt');
 
 const sequelize = new Sequelize('h62csm0qjtjptrut', 'ifqh21byds3r72m1', 'w97arx9v9nqyfx13', {
 	host:'localhost',
-    port: 8889,
-    // user: "root",
-    // password: "root",
+=======
+    port: 3306,
+    // user: "ifqh21byds3r72m1",
+    // password: "w97arx9v9nqyfx13",
+>>>>>>> 3809e35d08b232ff902c34085e88f78b870b61e7
 	dialect:'mysql',
 });
 
