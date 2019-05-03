@@ -1,4 +1,4 @@
-var path = require('path'); 
+// var path = require('path'); 
 // middleware function to check for logged-in users
 var sessionChecker = (req, res, next) => {
     
