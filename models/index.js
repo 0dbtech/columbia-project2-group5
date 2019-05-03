@@ -13,10 +13,6 @@ const sequelize = new Sequelize('h62csm0qjtjptrut', 'ifqh21byds3r72m1', 'w97arx9
 	dialect:'mysql',
 });
 
-// if (process.env.JAWSDB_URL) {
-//     connection = mysql.createConnection(process.env)
-// }
-
 // setup User model and its fields.
 var User = sequelize.define('users', {
     id: {
