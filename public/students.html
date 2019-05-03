@@ -87,21 +87,54 @@
                                     <div class="col-sm-6 col-xs-12">
                                         <div class="single_contant_left margin-top-60">
                                             <form action="#" id="formid">
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <label class="input-group-text" for="inputGroupSelect01">States</label>
+                                            
+                                                <div class="form-row">
+                                                    <div class="col-md-12">
+                                                        <label>Tuition Cost</label>
                                                     </div>
-                                                    <select class="custom-select" id="inputGroupSelect01">
-                                                        <option selected>Choose...</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                    </select>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="minincome"></label>
+                                                        <input type="text" class="form-control" id="minincome" placeholder="Minimum Income">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="maxincome"></label>
+                                                        <input type="text" class="form-control" id="maxincome" placeholder="maximum Income">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-12">
+                                                        <label>SAT Score</label>
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="satscore"></label>
+                                                        <input type="text" class="form-control" id="satscore" placeholder="SAT Total score (English + Math)">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-row">
+                                                    <div class="col-md-12">
+                                                        <label>ACT Score</label>
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="actscore"></label>
+                                                        <input type="text" class="form-control" id="actscore" placeholder="ACT score (Average Score of 4 subjects">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-12">
+                                                        <label>ZIP Code</label>
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for="zipcode"></label>
+                                                        <input type="text" class="form-control" id="zipcode" placeholder="Distance Search by ZIP Code">
+                                                    </div>
                                                 </div>
 
                                                 <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <label class="input-group-text" for="inputGroupSelect01">Family Income</label>
+                                                    <div class="input-group-prepend col-md-12">
+                                                        <label class="input-group-text" for="inputGroupSelect01">States</label>
                                                     </div>
                                                     <select class="custom-select" id="inputGroupSelect01">
                                                         <option selected>Choose...</option>
@@ -166,29 +199,32 @@
                                                     </select>
                                                 </div>
 
+                                                <br>
+                                                <br>
+
                                                 <div class="col-sm-12">
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="">Bachelor Degree program offered</label>
+                                                        <label><input type="checkbox" value="100">Bachelor Degree program offered</label>
                                                     </div>
 
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="">Associate degree program offered</label>
+                                                        <label><input type="checkbox" value="101">Associate degree program offered</label>
                                                     </div>
 
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="">1 year certificate programs</label>
+                                                        <label><input type="checkbox" value="102">1 year certificate programs</label>
                                                     </div>
 
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="">2 year certificate programs</label>
+                                                        <label><input type="checkbox" value="103">2 year certificate programs</label>
                                                     </div>
 
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="">4 year certificate programs</label>
+                                                        <label><input type="checkbox" value="104">4 year certificate programs</label>
                                                     </div>
                                                 </div>
 
-                                                <div class="">
+                                                <div class="submit-btn">
                                                     <input type="submit" value="submit" class="btn">
                                                 </div>
                                             </form>
