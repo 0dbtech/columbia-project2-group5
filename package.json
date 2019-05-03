@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/0dbtech/columbia-project2-group5#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
     "express-session": "^1.16.1",

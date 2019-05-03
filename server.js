@@ -44,6 +44,16 @@ app.engine('hbs', hbs({extname: 'hbs',defaultLayout: 'layout', layoutsDir: __dir
 app.set('views', path.join(__dirname, 'views')); 
 app.set('view engine', 'hbs'); 
 
+
+// Sets up the Express app to handle data parsing
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+
+
+
+// Routes
+// =============================================================
+require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 require("./routes/auth-routes.js")(app);
 
