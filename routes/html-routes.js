@@ -15,16 +15,17 @@ module.exports = function(app) {
 
   // contact route loads contact.html
   app.get("/contact", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/contact.html"));
+    // res.sendFile(path.join(__dirname, "../public/contact.html"));
+    res.render('contact');
   });
 
   // students route loads students.html
   app.get("/students", function(req, res) {
-    console.log('this is test');
-    res.sendFile(path.join(__dirname, "../public/students.html"));
+    res.render('students');
   });
 
   app.get("/educator", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/educator.html"));
+    // res.sendFile(path.join(__dirname, "../public/educator.html"));
+    res.render('educator');
   });
 };
