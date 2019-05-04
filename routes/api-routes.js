@@ -17,7 +17,7 @@ var axios = require('axios');
 module.exports = function(app) {
 
  // GET route for getting all of the todos
- app.get("/api/columbia", function(req, res) {
+ app.get("/api/findschool", function(req, res) {
 
   // searchSchool(res)
 
@@ -28,6 +28,7 @@ module.exports = function(app) {
 
 
 };
+
 
 
 var query = "https://api.data.gov/ed/collegescorecard/v1/schools?api_key=qhwLqB7uo9l9mn0UfvhvaK7h73Opx1KECd2zX2cx&_fields=school.name,school.state,id&school.state=ny&id=190150"

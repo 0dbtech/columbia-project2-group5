@@ -5,11 +5,6 @@ module.exports = function(sequelize, DataTypes) {
        allowNull: false,
        validate: {
          len: [1, 140],
-        //  customRule: function(value) {
-        //   if (value !== 1) {
-  
-        //   }
-        //  }
        }
       },
       complete: {
