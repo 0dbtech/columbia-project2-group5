@@ -101,7 +101,8 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="form-row">
+
+                                                {{!-- <div class="form-row">
                                                     <div class="col-md-12">
                                                         <label>ZIP Code</label>
                                                     </div>
@@ -109,14 +110,14 @@
                                                         <label for="zipcode"></label>
                                                         <input type="text" class="form-control" id="zipcode" placeholder="Distance Search by ZIP Code">
                                                     </div>
-                                                </div>
+                                                </div> --}}
 
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend col-md-12">
                                                         <label class="input-group-text" for="stateSelect">States</label>
                                                     </div>
                                                     <select name="state" class="new-state" id="stateSelect">
-                                                        {{!-- <option >Choose...</option> --}}
+                                                        <option value="none">Choose...</option>
                                                         <option value="1">Alabama</option>
                                                         <option value="2">Alaska</option>
                                                         <option value="4">Arizona</option>
@@ -180,7 +181,42 @@
 
                                                 <br>
                                                 <br>
+{{!-- Add Majors Dropdown --}}
+                                            <div class="input-group mb-3">
+                                                    <div class="input-group-prepend col-md-12">
+                                                        <label class="input-group-text" for="majorSelect">States</label>
+                                                    </div>
+                                                    <select name="state" class="new-major" id="majorSelect">
+                                                        <option value="none">Choose A Major...</option>
+                                                        <option value="&latest.academics.program.bachelors.agriculture=1">agriculture</option>
+                                                        <option value="&latest.academics.program.bachelors.architecture=1">architecture</option>
+                                                        <option value="&latest.academics.program.bachelors.biological=1">biological</option>
+                                                        <option value="&latest.academics.program.bachelors.business_marketing=1">business_marketing</option>
+                                                        <option value="&latest.academics.program.bachelors.communication=1">communication</option>
+                                                        <option value="&latest.academics.program.bachelors.communications_technology=1">communications_technology</option>
+                                                        <option value="&latest.academics.program.bachelors.computer=1">computer</option>
+                                                        <option value="&latest.academics.program.bachelors.education=1">education</option>
+                                                        <option value="&latest.academics.program.bachelors.engineering_technology=1">engineering_technology</option>
+                                                        <option value="&latest.academics.program.bachelors.engineering=1">engineering</option>
+                                                        <option value="&latest.academics.program.bachelors.english=1">english</option>
+                                                        <option value="&latest.academics.program.bachelors.ethnic_cultural_gender=1">ethnic_cultural_gender</option>
+                                                        <option value="&latest.academics.program.bachelors.history=1">history</option>
+                                                        <option value="&latest.academics.program.bachelors.humanities=1">humanities</option>
+                                                        <option value="&latest.academics.program.bachelors.language=1">language</option>
+                                                        <option value="&latest.academics.program.bachelors.legal=1">legal</option>
+                                                        <option value="&latest.academics.program.bachelors.library=1">library</option>
+                                                        <option value="&latest.academics.program.bachelors.psychology=1">psychology</option>
+                                                        <option value="&latest.academics.program.bachelors.visual_performing=1">visual_performing</option>
+                                                        <option value="&latest.academics.program.bachelors.science_technology=1">science_technology</option>
+                                                       
+                                                    </select>
+                                                </div>
 
+                                                <br>
+                                                <br>
+
+
+{{!-- 
                                                 <div class="col-sm-12">
                                                     <div class="checkbox" id="bachelor">
                                                         <label><input type="checkbox" value="100">Bachelor Degree program offered</label>
@@ -201,7 +237,7 @@
                                                     <div class="checkbox" id="threeyear">
                                                         <label><input type="checkbox" value="104">4 year certificate programs</label>
                                                     </div>
-                                                </div>
+                                                </div> --}}
 
                                                 <div class="submit-btn">
                                                     <input type="submit" value="submit" class="btn">
