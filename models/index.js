@@ -1,19 +1,14 @@
 var Sequelize = require('sequelize');
 var bcrypt = require('bcrypt');
 var sequelize;
+const config = require(__dirname + '/../config/config.json');
 
-
-if(process.env.JAWSDB_URL) {
-    sequelize = Sequelize.createConnection(process.env.JAWSDB_URL);
+if (process.env.JAWSDB_URL) {
+ sequelize = new Sequelize(process.env[config.production.use_env_variable], config.production);
 } else {
-     sequelize = new Sequelize('express_cc', 'root', 'root', {
-        host:'localhost',
-        port: 8889,
-        // user: "ifqh21byds3r72m1",
-        // password: "w97arx9v9nqyfx13",
-        dialect:'mysql',
-    });
+ sequelize = new Sequelize(config.development.database, config.development.username, config.development.password, config.development);
 }
+
 // create a sequelize instance with our local postgres database information.
 // const sequelize = new Sequelize('express_cc', 'root', 'root', {
 // 	host:'localhost',
