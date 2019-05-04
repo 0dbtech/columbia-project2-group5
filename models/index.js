@@ -2,6 +2,7 @@ var Sequelize = require('sequelize');
 var bcrypt = require('bcrypt');
 var sequelize;
 
+
 if(process.env.JAWSDB_URL) {
     sequelize = Sequelize.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -19,6 +20,7 @@ if(process.env.JAWSDB_URL) {
 //     port: 8889,
 // 	dialect:'mysql',
 // });
+
 
 // setup User model and its fields.
 var User = sequelize.define('users', {
