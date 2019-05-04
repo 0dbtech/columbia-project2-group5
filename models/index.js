@@ -1,23 +1,24 @@
-// Rita added 
-
 var Sequelize = require('sequelize');
 var bcrypt = require('bcrypt');
-	
-// create a sequelize instance with our local postgres database information.
+var sequelize;
 
 if(process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
+    sequelize = Sequelize.createConnection(process.env.JAWSDB_URL);
 } else {
-    
+     sequelize = new Sequelize('express_cc', 'root', 'root', {
+        host:'localhost',
+        port: 8889,
+        // user: "ifqh21byds3r72m1",
+        // password: "w97arx9v9nqyfx13",
+        dialect:'mysql',
+    });
 }
-
-const sequelize = new Sequelize('h62csm0qjtjptrut', 'ifqh21byds3r72m1', 'w97arx9v9nqyfx13', {
-	host:'localhost',
-    port: 3306,
-    // user: "ifqh21byds3r72m1",
-    // password: "w97arx9v9nqyfx13",
-	dialect:'mysql',
-});
+// create a sequelize instance with our local postgres database information.
+// const sequelize = new Sequelize('express_cc', 'root', 'root', {
+// 	host:'localhost',
+//     port: 8889,
+// 	dialect:'mysql',
+// });
 
 // setup User model and its fields.
 var User = sequelize.define('users', {
